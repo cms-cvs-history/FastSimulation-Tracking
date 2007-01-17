@@ -1,0 +1,17 @@
+#
+# This cfi should be included to run the GSTrackCandidateMaker 
+#
+
+module gsTrackCandidates = GSTrackCandidateMaker
+{	
+    string HitProducer = "siTrackerGaussianSmearingRecHits"
+    #bool   seedCleaning         = false
+    
+    #    # nested parameter set for TransientInitialStateEstimator
+    #    PSet TransientInitialStateEstimatorParameters =
+    #    {
+    #	string propagatorAlongTISE    = "PropagatorWithMaterial"
+    #	string propagatorOppositeTISE = "PropagatorWithMaterialOpposite"
+    #    }	
+    
+}
