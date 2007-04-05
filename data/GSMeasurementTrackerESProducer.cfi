@@ -1,5 +1,6 @@
 es_module = MeasurementTrackerESProducer
 {
+    string ComponentName        = ""
     string PixelCPE = "Fake"
     string StripCPE = "Fake"
     string HitMatcher = "Fake"

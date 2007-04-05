@@ -37,8 +37,8 @@ include "TrackingTools/MaterialEffects/data/OppositeMaterialPropagator.cfi"
 # pixelCPE
 #include "RecoLocalTracker/SiPixelRecHits/data/PixelCPEParmError.cfi"
 #TransientTrackingBuilder
-include "RecoTracker/TransientTrackingRecHit/data/TransientTrackingRecHitBuilder.cfi"
-
+###include "RecoTracker/TransientTrackingRecHit/data/TransientTrackingRecHitBuilder.cfi"
+include "RecoTracker/TransientTrackingRecHit/data/TransientTrackingRecHitBuilderWithoutRefit.cfi"
 
 # TrackProducer
 include "FastSimulation/Tracking/data/GSFinalFitWithMaterial.cfi"

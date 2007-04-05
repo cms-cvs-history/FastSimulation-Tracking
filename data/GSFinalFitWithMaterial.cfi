@@ -1,5 +1,6 @@
 module gsWithMaterialTracks = TrackProducer 
 {
+    string producer             = ""
     string Fitter                 = "KFFittingSmoother"   
     string Propagator             = "PropagatorWithMaterial" 
     string src                    = "gsTrackCandidates"
