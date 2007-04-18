@@ -40,6 +40,6 @@
 
 
 <library file=FastTrackAnalyzer.cc name=FastTrackAnalyzer>
-<flags SEAL_PLUGIN_NAME="FastTrackAnalyzer">
+<flags EDM_PLUGIN=1>
 </library>
 
