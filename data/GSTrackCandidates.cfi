@@ -5,25 +5,24 @@
 module gsTrackCandidates = GSTrackCandidateMaker
 {	
 
-	string HitProducer = "siTrackerGaussianSmearingRecHits"
-
-# The smallest number of hits to create a track candidate
-	uint32 MinRecHits = 5
-
-# The smallest pT (true, in GeV/c) to create a track candidate 
-	double pTMin = 0.8
-
-# The smallest d0 and z0 (true, in cm) to create a track candidate
-	double MaxD0 = 1.
-	double MaxZ0 = 30.
-	
-    #bool   seedCleaning         = false
+    string HitProducer = "siTrackerGaussianSmearingRecHits"
     
-    #    # nested parameter set for TransientInitialStateEstimator
-    #    PSet TransientInitialStateEstimatorParameters =
-    #    {
-    #	string propagatorAlongTISE    = "PropagatorWithMaterial"
-    #	string propagatorOppositeTISE = "PropagatorWithMaterialOpposite"
-    #    }	
+    # The smallest number of hits to create a track candidate
+    uint32 MinRecHits = 5
+    
+    # The smallest pT (true, in GeV/c) to create a track candidate 
+    double pTMin = 0.8
+    
+    # The smallest d0 and z0 (true, in cm) to create a track candidate
+    double MaxD0 = 1.
+    double MaxZ0 = 30.
+    
+    # Seed cleaning ?
+    bool   seedCleaning  = true
+
+    # The seed cuts for compatibility with originating from the beam axis.
+    double originRadius = 0.2
+    double originHalfLength = 15.
+    double originpTMin = 1.
     
 }
