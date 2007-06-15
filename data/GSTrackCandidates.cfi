@@ -19,7 +19,8 @@ module gsTrackCandidates = GSTrackCandidateMaker
     
     # Seed cleaning ?
     bool   seedCleaning  = true
-
+    string seedType      = "GlobalPixel"	
+	
     # The seed cuts for compatibility with originating from the beam axis.
     double originRadius = 0.2
     double originHalfLength = 15.
