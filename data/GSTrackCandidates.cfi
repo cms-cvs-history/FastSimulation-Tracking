@@ -29,5 +29,10 @@ module gsTrackCandidates = GSTrackCandidateMaker
 
     # Reject overlapping hits?
     bool overlapCleaning = true
-    
+
+    #Pattern Reco Emulation	
+    string fitter = "KFFitter"
+    double maxChi2 = 30.
+    uint32 minNumberOfHits = 5		    
+
 }
