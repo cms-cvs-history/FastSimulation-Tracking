@@ -1,6 +1,2 @@
 ############### generate CTF track candidates ############
-
-# KFTrajectoryFitterESProducer
-include "TrackingTools/TrackFitters/data/KFTrajectoryFitterESProducer.cfi"
-
 include "FastSimulation/Tracking/data/GSTrackCandidates.cfi"
