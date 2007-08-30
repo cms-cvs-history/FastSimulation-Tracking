@@ -24,7 +24,7 @@ module gsTrackCandidates = GSTrackCandidateMaker
 	
     # The seed cuts for compatibility with originating from the beam axis.
     double originRadius = 0.2
-    double originHalfLength = 15.
+    double originHalfLength = 15.9
     double originpTMin = 1.
 
     # Reject overlapping hits?
