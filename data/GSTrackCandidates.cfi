@@ -27,7 +27,7 @@ module gsTrackCandidates = GSTrackCandidateMaker
     double originHalfLength = 15.9
     double originpTMin = 1.
 
-    # Reject overlapping hits?
-    bool overlapCleaning = true
+    # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
+    bool overlapCleaning = false
     
 }
