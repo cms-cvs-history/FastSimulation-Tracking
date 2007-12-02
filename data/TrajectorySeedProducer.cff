@@ -1,0 +1,3 @@
+include "FastSimulation/Tracking/data/GlobalPixelSeedProducer.cff"
+include "FastSimulation/Tracking/data/GlobalMixedSeedProducer.cff"
+include "FastSimulation/Tracking/data/IterativeTrackingSeedProducer.cff"

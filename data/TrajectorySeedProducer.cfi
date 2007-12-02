@@ -1,0 +1,44 @@
+module trajectorySeedProducer = TrajectorySeedProducer
+{	
+
+    InputTag HitProducer = siTrackerGaussianSmearingRecHits
+    
+    # The smallest number of hits to create a track candidate
+    vuint32 minRecHits = {5}
+    
+    # The smallest pT (true, in GeV/c) to create a track candidate 
+    vdouble pTMin = {0.9}
+    
+    # The smallest d0 and z0 (true, in cm) to create a track candidate
+    vdouble maxD0 = {1.}
+    vdouble maxZ0 = {30.}
+    
+    # The number of hits needed to make a seed
+    vuint32 numberOfHits  = {2}
+
+    # The possible subdetectors for the first, second and third  hit
+    # No seed with more than three hits are foreseen, but the code can certainly be 
+    # modified to include this possibility.
+    # 1 = PXB, 2 = PXD, 3 = TIB, 4 = TID, 5 = TOB, 6 = TEC 
+    vuint32 firstHitSubDetectorNumber = { 2 }
+    vuint32 firstHitSubDetectors = {1,2}
+    vuint32 secondHitSubDetectorNumber = { 2 }
+    vuint32 secondHitSubDetectors = {1,2}
+    vuint32 thirdHitSubDetectorNumber = {0}
+    vuint32 thirdHitSubDetectors = {}
+    
+    # Seed cleaning ?
+    bool   seedCleaning  = true
+    vstring seedingAlgo      = {"GlobalPixel"}  
+    // Alternative is "GlobalPixel"
+    // Any other name will turn off the seed cleaning.
+	
+    # The seed cuts for compatibility with originating from the beam axis.
+    vdouble originRadius = {0.2}
+    vdouble originHalfLength = {15.9}
+    vdouble originpTMin = {1.}
+
+    # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
+    bool overlapCleaning = false
+    
+}

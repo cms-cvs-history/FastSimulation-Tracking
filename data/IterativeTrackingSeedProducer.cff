@@ -1,0 +1,18 @@
+module iterativeTrackingSeedProducer = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+
+replace iterativeTrackingSeedProducer.firstHitSubDetectorNumber = { 2, 3 }
+replace iterativeTrackingSeedProducer.firstHitSubDetectors = { 1,2, 1,2,6 }
+replace iterativeTrackingSeedProducer.secondHitSubDetectorNumber = { 2, 3 }
+replace iterativeTrackingSeedProducer.secondHitSubDetectors = { 1,2, 1,2,6 }
+replace iterativeTrackingSeedProducer.thirdHitSubDetectorNumber = { 0, 0 }
+replace iterativeTrackingSeedProducer.seedingAlgo      = {"GlobalPixel", "GlobalMixed"} 
+replace iterativeTrackingSeedProducer.minRecHits = {5,5}
+replace iterativeTrackingSeedProducer.pTMin = {0.9,0.9}
+replace iterativeTrackingSeedProducer.maxD0 = {1.,1.}
+replace iterativeTrackingSeedProducer.maxZ0 = {30.,30.}
+replace iterativeTrackingSeedProducer.numberOfHits  = {2,2}
+replace iterativeTrackingSeedProducer.originRadius = {0.2, 0.2}
+replace iterativeTrackingSeedProducer.originHalfLength = {15.9, 15.9}
+replace iterativeTrackingSeedProducer.originpTMin = {1.,1.}
+
+
