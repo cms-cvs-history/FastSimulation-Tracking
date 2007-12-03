@@ -1,0 +1,11 @@
+module pixelTripletSeedProducer = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+
+replace pixelTripletSeedProducer.numberOfHits = { 3 }
+
+replace pixelTripletSeedProducer.firstHitSubDetectorNumber = { 2 }
+replace pixelTripletSeedProducer.firstHitSubDetectors = {1,2}
+replace pixelTripletSeedProducer.secondHitSubDetectorNumber = { 2 }
+replace pixelTripletSeedProducer.secondHitSubDetectors = {1,2}
+replace pixelTripletSeedProducer.thirdHitSubDetectorNumber = { 2 }
+replace pixelTripletSeedProducer.thirdHitSubDetectors = {1,2}
+replace pixelTripletSeedProducer.seedingAlgo      = {"PixelTriplet"}  
