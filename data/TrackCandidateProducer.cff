@@ -1,0 +1,1 @@
+include "FastSimulation/Tracking/data/TrackCandidateProducer.cfi" 

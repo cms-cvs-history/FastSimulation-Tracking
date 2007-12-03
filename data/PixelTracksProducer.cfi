@@ -1,0 +1,24 @@
+module pixelTracksProducer = PixelTracksProducer
+{
+    
+    InputTag SeedProducer = pixelTripletSeedProducer:PixelTriplet
+
+    PSet RegionFactoryPSet = {
+	string ComponentName = "GlobalRegionProducer"
+	include "RecoTracker/TkTrackingRegions/data/GlobalTrackingRegion.cfi"
+    }
+    
+    
+    PSet   FitterPSet = {
+	string ComponentName = "PixelFitterByHelixProjections"
+	string TTRHBuilder = "WithoutRefit"
+    }
+    
+    PSet   FilterPSet = {
+	string ComponentName = "PixelTrackFilterByKinematics"
+	double ptMin = 0.
+	double tipMax = 1.0
+	double chi2 = 1000.
+    }
+    
+}
