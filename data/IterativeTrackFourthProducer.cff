@@ -1,0 +1,5 @@
+module fourthGSWithMaterialTracks = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace  fourthGSWithMaterialTracks.src ="fourthGSTrackCandidates"   
+replace fourthGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"

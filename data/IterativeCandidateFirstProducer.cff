@@ -1,0 +1,3 @@
+module firstGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+
+replace firstGSTrackCandidates.SeedProducer = iterativeTrackingGSSeeds:FirstTriplets

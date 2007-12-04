@@ -1,0 +1,11 @@
+include "FastSimulation/Tracking/data/IterativeCandidateFirstProducer.cff"
+include "FastSimulation/Tracking/data/IterativeCandidateSecondProducer.cff"
+include "FastSimulation/Tracking/data/IterativeCandidateThirdProducer.cff"
+include "FastSimulation/Tracking/data/IterativeCandidateFourthProducer.cff"
+
+sequence iterativeGSTrackCandidates = { 
+    firstGSTrackCandidates,
+    secondGSTrackCandidates,
+    thirdGSTrackCandidates,
+    fourthGSTrackCandidates
+}

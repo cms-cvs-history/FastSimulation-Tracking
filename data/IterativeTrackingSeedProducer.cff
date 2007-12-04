@@ -1,19 +1,19 @@
-module iterativeTrackingSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module iterativeTrackingGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace iterativeTrackingSeeds.firstHitSubDetectorNumber = { 2, 2, 3, 3}
-replace iterativeTrackingSeeds.firstHitSubDetectors = { 1,2, 1,2, 1,2,6, 1,2,6 }
-replace iterativeTrackingSeeds.secondHitSubDetectorNumber = { 2, 2, 3, 3 }
-replace iterativeTrackingSeeds.secondHitSubDetectors = { 1,2, 1,2, 1,2,6, 1,2,6 }
-replace iterativeTrackingSeeds.thirdHitSubDetectorNumber = { 2, 2, 0, 0 }
-replace iterativeTrackingSeeds.thirdHitSubDetectors = { 1,2, 1,2 }
-replace iterativeTrackingSeeds.seedingAlgo      = {"FirstTriplets", "SecondTriplets", "ThirdMixed", "FourthMixed"} 
-replace iterativeTrackingSeeds.minRecHits = {5,4,5,3}
-replace iterativeTrackingSeeds.pTMin = {0.9,0.5,0.5,0.3}
-replace iterativeTrackingSeeds.maxD0 = {1.,1.,1.,1.}
-replace iterativeTrackingSeeds.maxZ0 = {30.,30.,30.,30.}
-replace iterativeTrackingSeeds.numberOfHits  = {3, 3, 2, 2}
-replace iterativeTrackingSeeds.originRadius = {0.2, 0.2, 0.2, 0.2}
-replace iterativeTrackingSeeds.originHalfLength = {15.9, 15.9, 15.9, 15.9}
-replace iterativeTrackingSeeds.originpTMin = {1.,0.5, 0.5, 0.5}
+replace iterativeTrackingGSSeeds.firstHitSubDetectorNumber = { 2, 2, 3, 3}
+replace iterativeTrackingGSSeeds.firstHitSubDetectors = { 1,2, 1,2, 1,2,6, 1,2,6 }
+replace iterativeTrackingGSSeeds.secondHitSubDetectorNumber = { 2, 2, 3, 3 }
+replace iterativeTrackingGSSeeds.secondHitSubDetectors = { 1,2, 1,2, 1,2,6, 1,2,6 }
+replace iterativeTrackingGSSeeds.thirdHitSubDetectorNumber = { 2, 2, 0, 0 }
+replace iterativeTrackingGSSeeds.thirdHitSubDetectors = { 1,2, 1,2 }
+replace iterativeTrackingGSSeeds.seedingAlgo      = {"FirstTriplets", "SecondTriplets", "ThirdMixed", "FourthMixed"} 
+replace iterativeTrackingGSSeeds.minRecHits = {5,4,5,3}
+replace iterativeTrackingGSSeeds.pTMin = {0.9,0.5,0.5,0.3}
+replace iterativeTrackingGSSeeds.maxD0 = {1.,1.,1.,1.}
+replace iterativeTrackingGSSeeds.maxZ0 = {30.,30.,30.,30.}
+replace iterativeTrackingGSSeeds.numberOfHits  = {3, 3, 2, 2}
+replace iterativeTrackingGSSeeds.originRadius = {0.2, 0.2, 0.2, 0.2}
+replace iterativeTrackingGSSeeds.originHalfLength = {15.9, 15.9, 15.9, 15.9}
+replace iterativeTrackingGSSeeds.originpTMin = {1.,0.5, 0.5, 0.5}
 
 

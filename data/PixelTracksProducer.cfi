@@ -1,7 +1,7 @@
-module pixelTracks = PixelTracksProducer
+module pixelGSTracks = PixelTracksProducer
 {
     
-    InputTag SeedProducer = pixelTripletSeedProducer:PixelTriplet
+    InputTag SeedProducer = pixelTripletGSSeeds:PixelTriplet
 
     PSet RegionFactoryPSet = {
 	string ComponentName = "GlobalRegionProducer"

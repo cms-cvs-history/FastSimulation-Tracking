@@ -1,7 +1,7 @@
-module globalPixelSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module globalPixelGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace globalPixelSeeds.firstHitSubDetectorNumber = { 2 }
-replace globalPixelSeeds.firstHitSubDetectors = {1,2}
-replace globalPixelSeeds.secondHitSubDetectorNumber = { 2 }
-replace globalPixelSeeds.secondHitSubDetectors = {1,2}
-replace globalPixelSeeds.seedingAlgo      = {"GlobalPixel"}  
+replace globalPixelGSSeeds.firstHitSubDetectorNumber = { 2 }
+replace globalPixelGSSeeds.firstHitSubDetectors = {1,2}
+replace globalPixelGSSeeds.secondHitSubDetectorNumber = { 2 }
+replace globalPixelGSSeeds.secondHitSubDetectors = {1,2}
+replace globalPixelGSSeeds.seedingAlgo      = {"GlobalPixel"}  

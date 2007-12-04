@@ -1,7 +1,7 @@
-module globalMixedSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module globalMixedGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace globalMixedSeeds.firstHitSubDetectorNumber = { 3 }
-replace globalMixedSeeds.firstHitSubDetectors = {1,2,6}
-replace globalMixedSeeds.secondHitSubDetectorNumber = { 3 }
-replace globalMixedSeeds.secondHitSubDetectors = {1,2,6}
-replace globalMixedSeeds.seedingAlgo      = {"GlobalMixed"}  
+replace globalMixedGSSeeds.firstHitSubDetectorNumber = { 3 }
+replace globalMixedGSSeeds.firstHitSubDetectors = {1,2,6}
+replace globalMixedGSSeeds.secondHitSubDetectorNumber = { 3 }
+replace globalMixedGSSeeds.secondHitSubDetectors = {1,2,6}
+replace globalMixedGSSeeds.seedingAlgo      = {"GlobalMixed"}  

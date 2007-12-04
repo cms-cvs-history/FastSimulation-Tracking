@@ -1,9 +1,9 @@
-module pixelLessSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module pixelLessGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace pixelLessSeeds.firstHitSubDetectorNumber = { 3 }
-replace pixelLessSeeds.firstHitSubDetectors = {3,4,6}
-replace pixelLessSeeds.secondHitSubDetectorNumber = { 3 }
-replace pixelLessSeeds.secondHitSubDetectors = {3,4,6}
-replace pixelLessSeeds.seedingAlgo      = {"PixelLess"}  
-replace pixelLessSeeds.originRadius = {1.0}
+replace pixelLessGSSeeds.firstHitSubDetectorNumber = { 3 }
+replace pixelLessGSSeeds.firstHitSubDetectors = {3,4,6}
+replace pixelLessGSSeeds.secondHitSubDetectorNumber = { 3 }
+replace pixelLessGSSeeds.secondHitSubDetectors = {3,4,6}
+replace pixelLessGSSeeds.seedingAlgo      = {"PixelLess"}  
+replace pixelLessGSSeeds.originRadius = {1.0}
 

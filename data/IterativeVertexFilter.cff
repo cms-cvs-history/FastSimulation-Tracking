@@ -1,0 +1,11 @@
+include "FastSimulation/Tracking/data/IterativeFirstVertexFilter.cff"
+include "FastSimulation/Tracking/data/IterativeSecondVertexFilter.cff"
+include "FastSimulation/Tracking/data/IterativeThirdVertexFilter.cff"
+include "FastSimulation/Tracking/data/IterativeFourthVertexFilter.cff"
+
+sequence iterativeGSVertexFilter = { 
+    firstGSVertexFilter,
+    secondGSVertexFilter,
+    thirdGSVertexFilter,
+    fourthGSVertexFilter
+}

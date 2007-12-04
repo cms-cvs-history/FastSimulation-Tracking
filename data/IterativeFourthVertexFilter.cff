@@ -1,0 +1,6 @@
+module fourthGSVertexFilter = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+
+replace fourthGSVertexFilter.MinHits           = 3
+replace fourthGSVertexFilter.DistZFromVertex   = 0.1
+replace fourthGSVertexFilter.ChiCut            = 250000.
+replace fourthGSVertexFilter.recTracks         = fourthGSWithMaterialTracks

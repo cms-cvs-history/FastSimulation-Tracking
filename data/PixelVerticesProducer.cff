@@ -1,0 +1,3 @@
+module pixelGSVertexing = pixelVertices from "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
+
+replace pixelGSVertexing.TrackCollection = "pixelGSTracks"

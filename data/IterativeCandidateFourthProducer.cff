@@ -1,0 +1,3 @@
+module fourthGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+
+replace fourthGSTrackCandidates.SeedProducer = iterativeTrackingGSSeeds:FourthMixed

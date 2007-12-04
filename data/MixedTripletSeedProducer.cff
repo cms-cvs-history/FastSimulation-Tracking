@@ -1,11 +1,11 @@
-module mixedTripletSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module mixedTripletGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace mixedTripletSeeds.numberOfHits = { 3 }
+replace mixedTripletGSSeeds.numberOfHits = { 3 }
 
-replace mixedTripletSeeds.firstHitSubDetectorNumber = { 2 }
-replace mixedTripletSeeds.firstHitSubDetectors = {1,2}
-replace mixedTripletSeeds.secondHitSubDetectorNumber = { 2 }
-replace mixedTripletSeeds.secondHitSubDetectors = {1,2}
-replace mixedTripletSeeds.thirdHitSubDetectorNumber = { 3 }
-replace mixedTripletSeeds.thirdHitSubDetectors = {1,2,3}
-replace mixedTripletSeeds.seedingAlgo      = {"MixedTriplet"}  
+replace mixedTripletGSSeeds.firstHitSubDetectorNumber = { 2 }
+replace mixedTripletGSSeeds.firstHitSubDetectors = {1,2}
+replace mixedTripletGSSeeds.secondHitSubDetectorNumber = { 2 }
+replace mixedTripletGSSeeds.secondHitSubDetectors = {1,2}
+replace mixedTripletGSSeeds.thirdHitSubDetectorNumber = { 3 }
+replace mixedTripletGSSeeds.thirdHitSubDetectors = {1,2,3}
+replace mixedTripletGSSeeds.seedingAlgo      = {"MixedTriplet"}  
