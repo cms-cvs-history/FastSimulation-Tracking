@@ -1,0 +1,18 @@
+# Global Mixed seeding
+include "FastSimulation/Tracking/data/GlobalMixedSeedProducer.cff"
+
+# TrackCandidates
+module ctfGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace ctfGSTrackCandidates.SeedProducer = globalMixedGSSeeds:GlobalMixed
+
+# reco::Tracks
+module ctfGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  ctfGSWithMaterialTracks.src ="ctfGSTrackCandidates"   
+replace ctfGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+
+# The sequence
+sequence ctfGSTracking = {
+    globalMixedGSSeeds,
+    ctfGSTrackCandidates,
+    ctfGSWithMaterialTracks
+}

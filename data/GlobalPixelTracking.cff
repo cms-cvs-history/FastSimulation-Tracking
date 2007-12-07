@@ -1,0 +1,18 @@
+# Global Pixel seeding
+include "FastSimulation/Tracking/data/GlobalPixelSeedProducer.cff"
+
+# TrackCandidates
+module globalPixelGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace globalPixelGSTrackCandidates.SeedProducer = globalPixelGSSeeds:GlobalPixel
+
+# reco::Tracks
+module globalPixelGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  globalPixelGSWithMaterialTracks.src ="globalPixelGSTrackCandidates"   
+replace globalPixelGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+
+# The sequence
+sequence globalPixelGSTracking = {
+    globalPixelGSSeeds,
+    globalPixelGSTrackCandidates,
+    globalPixelGSWithMaterialTracks
+}

@@ -1,0 +1,18 @@
+# Pixel Less seeding
+include "FastSimulation/Tracking/data/PixelLessSeedProducer.cff"
+
+# TrackCandidates
+module pixelLessGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace pixelLessGSTrackCandidates.SeedProducer = pixelLessGSSeeds:PixelLess
+
+# reco::Tracks
+module pixelLessGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  pixelLessGSWithMaterialTracks.src ="pixelLessGSTrackCandidates"   
+replace pixelLessGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+
+# The sequence
+sequence pixelLessGSTracking = {
+    pixelLessGSSeeds,
+    pixelLessGSTrackCandidates,
+    pixelLessGSWithMaterialTracks
+}

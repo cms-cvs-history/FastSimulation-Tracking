@@ -14,6 +14,6 @@ replace iterativeTrackingGSSeeds.maxZ0 = {30.,30.,30.,30.}
 replace iterativeTrackingGSSeeds.numberOfHits  = {3, 3, 2, 2}
 replace iterativeTrackingGSSeeds.originRadius = {0.2, 0.2, 0.2, 0.2}
 replace iterativeTrackingGSSeeds.originHalfLength = {15.9, 15.9, 15.9, 15.9}
-replace iterativeTrackingGSSeeds.originpTMin = {1.,0.5, 0.5, 0.5}
+replace iterativeTrackingGSSeeds.originpTMin = {0.9, 0.5, 0.5, 0.3}
 
 

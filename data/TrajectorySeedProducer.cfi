@@ -27,18 +27,12 @@ module trajectorySeedProducer = TrajectorySeedProducer
     vuint32 thirdHitSubDetectorNumber = {0}
     vuint32 thirdHitSubDetectors = {}
     
-    # Seed cleaning ?
-    bool   seedCleaning  = true
     vstring seedingAlgo      = {"GlobalPixel"}  
-    // Alternative is "GlobalPixel"
-    // Any other name will turn off the seed cleaning.
 	
     # The seed cuts for compatibility with originating from the beam axis.
+    bool   seedCleaning  = true
     vdouble originRadius = {0.2}
     vdouble originHalfLength = {15.9}
     vdouble originpTMin = {1.}
 
-    # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
-    bool overlapCleaning = false
-    
 }
