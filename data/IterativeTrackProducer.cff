@@ -3,7 +3,7 @@ include "FastSimulation/Tracking/data/IterativeTrackSecondProducer.cff"
 include "FastSimulation/Tracking/data/IterativeTrackThirdProducer.cff"
 include "FastSimulation/Tracking/data/IterativeTrackFourthProducer.cff"
 
-sequence iterativeGSTracks = { 
+sequence iterativeGSTrackReco = { 
     firstGSWithMaterialTracks,
     secondGSWithMaterialTracks,
     thirdGSWithMaterialTracks,

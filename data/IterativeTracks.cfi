@@ -1,0 +1,8 @@
+module iterativeGSWithMaterialTracks = TrackMerger {
+    VInputTag src = { 
+	firstGSVertexFilter,
+	secondGSVertexFilter,
+	thirdGSVertexFilter,
+	fourthGSVertexFilter
+    }
+}

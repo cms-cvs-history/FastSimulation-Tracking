@@ -4,12 +4,14 @@ include "FastSimulation/Tracking/data/IterativeTrackingSeedProducer.cff"
 include "FastSimulation/Tracking/data/IterativeCandidateProducer.cff"
 include "FastSimulation/Tracking/data/IterativeTrackProducer.cff"
 include "FastSimulation/Tracking/data/IterativeVertexFilter.cff"
+include "FastSimulation/Tracking/data/IterativeTracks.cfi"
 
 sequence iterativeGSTracking = {
     pixelGSTracking,
     pixelGSVertexing,
     iterativeTrackingGSSeeds,
     iterativeGSTrackCandidates,
-    iterativeGSTracks,
-    iterativeGSVertexFilter
+    iterativeGSTrackReco,
+    iterativeGSVertexFilter,
+    iterativeGSWithMaterialTracks
 }
