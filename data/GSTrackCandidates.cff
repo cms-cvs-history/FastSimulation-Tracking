@@ -1,2 +1,0 @@
-############### generate CTF track candidates ############
-include "FastSimulation/Tracking/data/GSTrackCandidates.cfi"
