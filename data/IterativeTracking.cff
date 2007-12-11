@@ -13,5 +13,6 @@ sequence iterativeGSTracking = {
     iterativeGSTrackCandidates,
     iterativeGSTrackReco,
     iterativeGSVertexFilter,
+    iterativeGSMerger,
     iterativeGSWithMaterialTracks
 }

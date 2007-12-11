@@ -1,5 +1,11 @@
-module thirdGSVertexFilter = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+module thirdGSVertexFilter1 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
 
-replace thirdGSVertexFilter.DistZFromVertex   = 0.1
-replace thirdGSVertexFilter.ChiCut            = 250000.
-replace thirdGSVertexFilter.recTracks         = thirdGSWithMaterialTracks
+replace thirdGSVertexFilter1.DistZFromVertex   = 0.1
+replace thirdGSVertexFilter1.ChiCut            = 250000.
+replace thirdGSVertexFilter1.recTracks         = thirdGSWithMaterialTracks
+
+module thirdGSVertexFilter2 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+
+replace thirdGSVertexFilter2.DistZFromVertex   = 0.1
+replace thirdGSVertexFilter2.ChiCut            = 250000.
+replace thirdGSVertexFilter2.recTracks         = thirdGSTrackCandidates

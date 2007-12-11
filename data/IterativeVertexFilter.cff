@@ -4,8 +4,12 @@ include "FastSimulation/Tracking/data/IterativeThirdVertexFilter.cff"
 include "FastSimulation/Tracking/data/IterativeFourthVertexFilter.cff"
 
 sequence iterativeGSVertexFilter = { 
-    firstGSVertexFilter,
-    secondGSVertexFilter,
-    thirdGSVertexFilter,
-    fourthGSVertexFilter
+    firstGSVertexFilter1,
+    firstGSVertexFilter2,
+    secondGSVertexFilter1,
+    secondGSVertexFilter2,
+    thirdGSVertexFilter1,
+    thirdGSVertexFilter2,
+    fourthGSVertexFilter1,
+    fourthGSVertexFilter2
 }

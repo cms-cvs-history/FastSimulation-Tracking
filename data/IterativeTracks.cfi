@@ -1,8 +1,16 @@
-module iterativeGSWithMaterialTracks = TrackMerger {
+module iterativeGSMerger = TrackMerger {
     VInputTag src = { 
-	firstGSVertexFilter,
-	secondGSVertexFilter,
-	thirdGSVertexFilter,
-	fourthGSVertexFilter
+	firstGSVertexFilter1,
+	firstGSVertexFilter2,
+	secondGSVertexFilter1,
+	secondGSVertexFilter2,
+	thirdGSVertexFilter1,
+	thirdGSVertexFilter2,
+	fourthGSVertexFilter1,
+	fourthGSVertexFilter2
     }
+}
+
+module iterativeGSWithMaterialTracks = AnyTrackFullCloneSelector { 
+    InputTag src = iterativeGSMerger
 }

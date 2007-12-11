@@ -1,1 +1,4 @@
-module firstGSVertexFilter = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+module firstGSVertexFilter1 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+
+module firstGSVertexFilter2 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+replace firstGSVertexFilter2.recTracks         = firstGSTrackCandidates

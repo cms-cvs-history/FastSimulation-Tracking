@@ -4,6 +4,11 @@ module trackCandidateProducer = TrackCandidateProducer
     InputTag HitProducer = siTrackerGaussianSmearingRecHits
 
     InputTag SeedProducer = globalPixelGSSeeds:GlobalPixel
+
+    # The smallest number of crossed layers to make a candidate
+    uint32 MinNumberOfCrossedLayers = 5
+
+    InputTag TrackProducer = ctfGSWithMaterialTracks
     
     # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
     bool overlapCleaning = false

@@ -1,3 +1,4 @@
 module secondGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 
 replace secondGSTrackCandidates.SeedProducer = iterativeTrackingGSSeeds:SecondTriplets
+replace secondGSTrackCandidates.MinNumberOfCrossedLayers = 4

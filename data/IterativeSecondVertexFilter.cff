@@ -1,6 +1,13 @@
-module secondGSVertexFilter = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+module secondGSVertexFilter1 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
 
-replace secondGSVertexFilter.MinHits           = 4
-replace secondGSVertexFilter.DistZFromVertex   = 0.4
-replace secondGSVertexFilter.ChiCut            = 130.
-replace secondGSVertexFilter.recTracks         = secondGSWithMaterialTracks
+replace secondGSVertexFilter1.MinHits           = 4
+replace secondGSVertexFilter1.DistZFromVertex   = 0.4
+replace secondGSVertexFilter1.ChiCut            = 130.
+replace secondGSVertexFilter1.recTracks         = secondGSWithMaterialTracks
+
+module secondGSVertexFilter2 = vertexFilter from "FastSimulation/Tracking/data/VertexFilter.cfi"
+
+replace secondGSVertexFilter2.MinHits           = 4
+replace secondGSVertexFilter2.DistZFromVertex   = 0.4
+replace secondGSVertexFilter2.ChiCut            = 130.
+replace secondGSVertexFilter2.recTracks         = secondGSTrackCandidates
