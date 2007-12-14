@@ -126,7 +126,7 @@ PixelTracksMaker::produce(edm::Event& e, const edm::EventSetup& es) {
   unsigned nTriplets = 0;
   unsigned nFilterTracks = 0;
   unsigned nPixelTracks = 0;
-  unsigned nCleanedTracks = 0;
+  // unsigned nCleanedTracks = 0;
   
   std::auto_ptr<reco::TrackCollection> tracks(new reco::TrackCollection);    
   std::auto_ptr<TrackingRecHitCollection> recHits(new TrackingRecHitCollection);
@@ -335,6 +335,7 @@ PixelTracksMaker::produce(edm::Event& e, const edm::EventSetup& es) {
       // decide if track should be skipped according to filter 
       if ( ! (*theFilter)(track) ) { 
 	delete track; 
+	for ( unsigned i=0; i<TripletHits.size(); ++i ) delete TripletHits[i];
 	continue; 
       }
       ++nFilterTracks;
@@ -357,7 +358,7 @@ PixelTracksMaker::produce(edm::Event& e, const edm::EventSetup& es) {
     
     for (unsigned int k = 0; k < hits.size(); k++)
       {
-	TrackingRecHit *hit = (hits.at(k))->clone();
+	TrackingRecHit *hit = (TrackingRecHit*)(hits.at(k));
 	track->setHitPattern(*hit, k);
 	recHits->push_back(hit);
       }
@@ -394,6 +395,7 @@ PixelTracksMaker::produce(edm::Event& e, const edm::EventSetup& es) {
   e.put(tracks);
   
   
+  /*
   std::cout << " PixelTracksMaker: Total SimTracks           = " << nSimTracks <<  std::endl
 	    << "                   Total SimTracksWithHits   = " << nTracksWithHits  <<  std::endl
 	    << "                   Total SimTracksWithPT     = " << nTracksWithPT  <<  std::endl 
@@ -402,6 +404,9 @@ PixelTracksMaker::produce(edm::Event& e, const edm::EventSetup& es) {
 	    << "                   Total Filtered Tracks     = " << nFilterTracks <<std::endl
 	    << "                   Total Pixel Tracks        = " << nPixelTracks <<std::endl
 	    << std::endl;
+  */
+
+  for ( unsigned ir=0; ir<regions.size(); ++ir ) delete regions[ir];
 
 }
 
