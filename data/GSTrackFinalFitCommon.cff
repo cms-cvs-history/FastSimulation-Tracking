@@ -12,6 +12,7 @@ include "TrackingTools/TrackFitters/data/KFTrajectorySmootherESProducer.cfi"
 
 # KFFittingSmootherESProducer
 include "TrackingTools/TrackFitters/data/KFFittingSmootherESProducer.cfi"
+replace KFFittingSmoother.EstimateCut = 15.0
 
 # PropagatorWithMaterialESProducer
 include "TrackingTools/MaterialEffects/data/MaterialPropagator.cfi"

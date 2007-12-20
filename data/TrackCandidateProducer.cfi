@@ -8,9 +8,15 @@ module trackCandidateProducer = TrackCandidateProducer
     # The smallest number of crossed layers to make a candidate
     uint32 MinNumberOfCrossedLayers = 5
 
+    # The number of crossed layers needed before stopping tracking
+    uint32 MaxNumberOfCrossedLayers = 999
+
     InputTag TrackProducer = ctfGSWithMaterialTracks
     
     # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
-    bool overlapCleaning = false
+    bool OverlapCleaning = false
+
+    # Reject copies of tracks from several seeds - take the first seed in that case
+    bool SeedCleaning = true
     
 }

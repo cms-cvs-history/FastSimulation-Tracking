@@ -2,17 +2,30 @@
 include "FastSimulation/Tracking/data/GlobalMixedSeedProducer.cff"
 
 # TrackCandidates
-module ctfGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-replace ctfGSTrackCandidates.SeedProducer = globalMixedGSSeeds:GlobalMixed
+module globalMixedGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace globalMixedGSTrackCandidates.SeedProducer = globalMixedGSSeeds:GlobalMixed
+replace globalMixedGSTrackCandidates.TrackProducer = globalPixelGSWithMaterialTracks
 
 # reco::Tracks
-module ctfGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  ctfGSWithMaterialTracks.src ="ctfGSTrackCandidates"   
-replace ctfGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+module globalMixedGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  globalMixedGSWithMaterialTracks.src ="globalMixedGSTrackCandidates"   
+replace globalMixedGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+
+# Merging
+module ctfGSWithMaterialTracks = FastTrackMerger {
+
+    VInputTag TrackProducers = { 
+	globalMixedGSTrackCandidates,
+	globalMixedGSWithMaterialTracks
+    }
+
+}
+
 
 # The sequence
 sequence ctfGSTracking = {
     globalMixedGSSeeds,
-    ctfGSTrackCandidates,
+    globalMixedGSTrackCandidates,
+    globalMixedGSWithMaterialTracks,
     ctfGSWithMaterialTracks
 }
