@@ -5,6 +5,6 @@ module vertexFilter=VertexFilter {
     double   DistRhoFromVertex = 0.1
     double   ChiCut            = 100.
     InputTag recTracks         = firstGSWithMaterialTracks
-    InputTag recVertices       = pixelGSVertexing
+    InputTag recVertices       = pixelVertices
 
 }

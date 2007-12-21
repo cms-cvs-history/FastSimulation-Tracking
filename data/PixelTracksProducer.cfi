@@ -1,4 +1,4 @@
-module pixelGSTracks = PixelTracksProducer
+module pixelTracks = PixelTracksProducer
 {
     
     InputTag SeedProducer = pixelTripletGSSeeds:PixelTriplet

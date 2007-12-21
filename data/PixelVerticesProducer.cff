@@ -1,3 +1,11 @@
+/*
 module pixelGSVertexing = pixelVertices from "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
 
-replace pixelGSVertexing.TrackCollection = "pixelGSTracks"
+replace pixelGSVertexing.TrackCollection = "pixelTracks"
+*/
+
+include "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
+sequence pixelGSVertexing = { pixelVertices }
+
+include "FastSimulation/Tracking/data/PixelTracksProducer.cff"
+sequence recopixelvertexing = { pixelTripletGSSeeds & pixelTracks & pixelVertices }
