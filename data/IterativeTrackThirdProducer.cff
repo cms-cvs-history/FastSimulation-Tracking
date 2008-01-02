@@ -1,5 +1,7 @@
 module thirdGSWithMaterialTracks = 
   ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
 
-replace  thirdGSWithMaterialTracks.src ="thirdGSTrackCandidates"   
+replace thirdGSWithMaterialTracks.src ="thirdGSTrackCandidates"   
 replace thirdGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+replace thirdGSWithMaterialTracks.Fitter = "KFFittingSmoother"
+replace thirdGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"

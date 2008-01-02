@@ -9,6 +9,8 @@ replace globalPixelGSTrackCandidates.SeedProducer = globalPixelGSSeeds:GlobalPix
 module globalPixelGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
 replace  globalPixelGSWithMaterialTracks.src ="globalPixelGSTrackCandidates"   
 replace globalPixelGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+replace globalPixelGSWithMaterialTracks.Fitter = "KFFittingSmoother"
+replace globalPixelGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
 
 # The sequence
 sequence globalPixelGSTracking = {
