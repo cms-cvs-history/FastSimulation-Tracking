@@ -5,9 +5,9 @@ include "FastSimulation/Tracking/data/GlobalPixelSeedProducer.cff"
 module globalPixelGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 replace globalPixelGSTrackCandidates.SeedProducer = globalPixelGSSeeds:GlobalPixel
 
-# reco::Tracks
+# reco::Tracks (possibly with invalid hits)
 module globalPixelGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  globalPixelGSWithMaterialTracks.src ="globalPixelGSTrackCandidates"   
+replace globalPixelGSWithMaterialTracks.src ="globalPixelGSTrackCandidates"   
 replace globalPixelGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
 replace globalPixelGSWithMaterialTracks.Fitter = "KFFittingSmoother"
 replace globalPixelGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
