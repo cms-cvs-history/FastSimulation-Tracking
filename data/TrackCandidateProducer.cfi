@@ -1,7 +1,7 @@
 module trackCandidateProducer = TrackCandidateProducer
 {	
 
-    InputTag HitProducer = siTrackerGaussianSmearingRecHits
+    InputTag HitProducer = siTrackerGaussianSmearingRecHits:TrackerGSMatchedRecHits
 
     InputTag SeedProducer = globalPixelGSSeeds:GlobalPixel
 

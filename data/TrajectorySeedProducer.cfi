@@ -1,7 +1,7 @@
 module trajectorySeedProducer = TrajectorySeedProducer
 {	
 
-    InputTag HitProducer = siTrackerGaussianSmearingRecHits
+    InputTag HitProducer = siTrackerGaussianSmearingRecHits:TrackerGSMatchedRecHits
     
     # The smallest number of layer crossed to create a track candidate
     vuint32 minRecHits = {5}

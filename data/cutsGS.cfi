@@ -7,4 +7,5 @@ module cutsGS = RecoTrackSelector
     double tip = 3.5
     double lip = 30
     int32  minHit = 8
+   double maxChi2 = 10000 #not used in tdr
 }
