@@ -8,7 +8,7 @@ replace globalMixedGSTrackCandidates.TrackProducer = globalPixelGSWithMaterialTr
 
 # reco::Tracks
 module globalMixedGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  globalMixedGSWithMaterialTracks.src ="globalMixedGSTrackCandidates"   
+replace  globalMixedGSWithMaterialTracks.src =globalMixedGSTrackCandidates   
 replace globalMixedGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
 replace globalMixedGSWithMaterialTracks.Fitter = "KFFittingSmoother"
 replace globalMixedGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"

@@ -7,7 +7,7 @@ replace pixelLessGSTrackCandidates.SeedProducer = pixelLessGSSeeds:PixelLess
 
 # reco::Tracks
 module pixelLessGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  pixelLessGSWithMaterialTracks.src ="pixelLessGSTrackCandidates"   
+replace  pixelLessGSWithMaterialTracks.src =pixelLessGSTrackCandidates   
 replace pixelLessGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
 replace pixelLessGSWithMaterialTracks.Fitter = "KFFittingSmoother"
 replace pixelLessGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
