@@ -1,7 +1,7 @@
 module secondGeneralTracks = 
   ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
 
-replace secondGeneralTracks.src ="secondGeneralTrackCandidates"   
+replace secondGeneralTracks.src =secondGeneralTrackCandidates   
 replace secondGeneralTracks.TTRHBuilder = "WithoutRefit"
 replace secondGeneralTracks.Fitter = "KFFittingSmoother"
 replace secondGeneralTracks.Propagator = "PropagatorWithMaterial"

@@ -1,7 +1,7 @@
 module firstGeneralTracks = 
   ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
 
-replace firstGeneralTracks.src ="firstGeneralTrackCandidates"   
+replace firstGeneralTracks.src =firstGeneralTrackCandidates   
 replace firstGeneralTracks.TTRHBuilder = "WithoutRefit"
 replace firstGeneralTracks.Fitter = "KFFittingSmoother"
 replace firstGeneralTracks.Propagator = "PropagatorWithMaterial"
