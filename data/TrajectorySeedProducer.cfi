@@ -35,4 +35,8 @@ module trajectorySeedProducer = TrajectorySeedProducer
     vdouble originHalfLength = {22.65}
     vdouble originpTMin = {1.}
 
+    # The primary vertex collection
+    VInputTag primaryVertices = { none }
+    vdouble zVertexConstraint = { -1.0 }
+
 }

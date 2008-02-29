@@ -1,0 +1,7 @@
+include "FastSimulation/Tracking/data/GeneralCandidateFirstProducer.cff"
+include "FastSimulation/Tracking/data/GeneralCandidateSecondProducer.cff"
+
+sequence generalTrackCandidates = { 
+    firstGeneralTrackCandidates &
+    secondGeneralTrackCandidates
+}

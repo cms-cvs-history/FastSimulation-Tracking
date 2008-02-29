@@ -2,6 +2,6 @@ include "FastSimulation/Tracking/data/PixelTripletSeedProducer.cff"
 include "FastSimulation/Tracking/data/PixelTracksProducer.cfi"
 
 sequence pixelGSTracking = { 
-    pixelTripletGSSeeds,
+    pixelTripletGSSeeds &
     pixelTracks
 }

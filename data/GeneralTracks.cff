@@ -1,0 +1,8 @@
+module generalTracks = selectCKF from "RecoTracker/FinalTrackSelectors/data/selectCKF.cfi" 
+replace generalTracks.src = preFilterGeneralTracks
+replace generalTracks.chi2n_par = 2.0
+replace generalTracks.d0_par1 = { 0.55, 4. }
+replace generalTracks.dz_par1 = { 0.65, 4. }
+replace generalTracks.d0_par2 = { 0.55, 4. }
+replace generalTracks.dz_par2 = { 0.45, 4. }
+replace generalTracks.copyTrajectories = true

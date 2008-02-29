@@ -1,0 +1,7 @@
+include "FastSimulation/Tracking/data/GeneralTrackFirstProducer.cff"
+include "FastSimulation/Tracking/data/GeneralTrackSecondProducer.cff"
+
+sequence generalTrackReco = { 
+    firstGeneralTracks,
+    secondGeneralTracks
+}

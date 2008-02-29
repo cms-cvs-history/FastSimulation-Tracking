@@ -1,0 +1,10 @@
+module preFilterGeneralTracks = FastTrackMerger {
+
+    VInputTag TrackProducers = { 
+	firstGeneralTrackCandidates,
+	firstGeneralTracks,
+	secondGeneralTrackCandidates,
+	secondGeneralTracks
+    }
+
+}

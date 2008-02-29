@@ -3,6 +3,6 @@ sequence pixelGSVertexing = { pixelVertices }
 
 include "FastSimulation/Tracking/data/PixelTracksProducer.cff"
 sequence recopixelvertexing = { 
-    pixelGSTracking, 
+    pixelGSTracking &
     pixelVertices 
 }

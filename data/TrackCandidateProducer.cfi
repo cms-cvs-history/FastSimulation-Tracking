@@ -11,7 +11,7 @@ module trackCandidateProducer = TrackCandidateProducer
     # The number of crossed layers needed before stopping tracking
     uint32 MaxNumberOfCrossedLayers = 999
 
-    InputTag TrackProducer = ctfGSWithMaterialTracks
+    InputTag TrackProducer = generalTracks
     
     # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
     bool OverlapCleaning = false

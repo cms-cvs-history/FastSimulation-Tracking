@@ -1,0 +1,17 @@
+include "FastSimulation/Tracking/data/PixelTracksProducer.cff"
+include "FastSimulation/Tracking/data/PixelVerticesProducer.cff"
+include "FastSimulation/Tracking/data/GeneralTrackSeedProducer.cff"
+include "FastSimulation/Tracking/data/GeneralCandidateProducer.cff"
+include "FastSimulation/Tracking/data/GeneralTrackProducer.cff"
+include "FastSimulation/Tracking/data/GeneralPreFilteredTracks.cfi"
+include "FastSimulation/Tracking/data/GeneralTracks.cfi"
+
+sequence generalTracking = {
+    pixelGSTracking &
+    pixelGSVertexing &
+    generalTrackingSeeds &
+    generalTrackCandidates &
+    generalTrackReco &
+    preFilterGeneralTracks &
+    generalTracks
+}
