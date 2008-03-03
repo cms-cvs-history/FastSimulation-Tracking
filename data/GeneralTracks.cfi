@@ -5,3 +5,4 @@ replace generalTracks.d0_par1 = { 0.55, 4. }
 replace generalTracks.dz_par1 = { 0.65, 4. }
 replace generalTracks.d0_par2 = { 0.55, 4. }
 replace generalTracks.dz_par2 = { 0.45, 4. }
+replace generalTracks.copyTrajectories = true
