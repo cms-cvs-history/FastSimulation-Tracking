@@ -6,5 +6,8 @@ module vertexFilter=VertexFilter {
     double   ChiCut            = 100.
     InputTag recTracks         = firstGSWithMaterialTracks
     InputTag recVertices       = pixelVertices
+    bool UseQuality = true
+    string TrackQuality = "highPurity"
+    string TrackAlgorithm = "iter2"
 
 }

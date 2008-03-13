@@ -4,7 +4,8 @@ include "FastSimulation/Tracking/data/GeneralTrackSeedProducer.cff"
 include "FastSimulation/Tracking/data/GeneralCandidateProducer.cff"
 include "FastSimulation/Tracking/data/GeneralTrackProducer.cff"
 include "FastSimulation/Tracking/data/GeneralPreFilteredTracks.cfi"
-include "FastSimulation/Tracking/data/GeneralTracks.cfi"
+#include "FastSimulation/Tracking/data/GeneralTracks.cfi"
+include "RecoTracker/FinalTrackSelectors/data/TracksWithQuality.cff"
 
 sequence generalTracking = {
     pixelGSTracking &
@@ -12,6 +13,6 @@ sequence generalTracking = {
     generalTrackingSeeds &
     generalTrackCandidates &
     generalTrackReco &
-    preFilterGeneralTracks &
-    generalTracks
+    preFilterCmsTracks &
+    tracksWithQuality
 }

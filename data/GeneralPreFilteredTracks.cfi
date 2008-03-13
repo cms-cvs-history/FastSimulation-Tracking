@@ -1,4 +1,4 @@
-module preFilterGeneralTracks = FastTrackMerger {
+module preFilterCmsTracks = FastTrackMerger {
 
     VInputTag TrackProducers = { 
 	firstGeneralTrackCandidates,
