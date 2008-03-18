@@ -16,6 +16,9 @@ module trackCandidateProducer = TrackCandidateProducer
     # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
     bool OverlapCleaning = false
 
+    # Split matched hits? 
+    bool SplitHits = true
+
     # Reject copies of tracks from several seeds - take the first seed in that case
     bool SeedCleaning = true
     
