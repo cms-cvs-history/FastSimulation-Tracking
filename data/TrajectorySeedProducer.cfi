@@ -32,7 +32,7 @@ module trajectorySeedProducer = TrajectorySeedProducer
     # The seed cuts for compatibility with originating from the beam axis.
     bool   seedCleaning  = true
     vdouble originRadius = {0.2}
-    vdouble originHalfLength = {22.65}
+    vdouble originHalfLength = {15.9}
     vdouble originpTMin = {1.}
 
 }
