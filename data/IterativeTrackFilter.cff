@@ -1,0 +1,9 @@
+include "FastSimulation/Tracking/data/IterativeFirstTrackFilter.cff"
+include "FastSimulation/Tracking/data/IterativeSecondTrackFilter.cff"
+include "FastSimulation/Tracking/data/IterativeThirdTrackFilter.cff"
+
+sequence iterativeTrackFiltering = { 
+    iterativeFirstTrackFiltering &
+    iterativeSecondTrackFiltering &
+    iterativeThirdTrackFiltering
+}

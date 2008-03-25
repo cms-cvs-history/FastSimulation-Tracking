@@ -1,0 +1,20 @@
+module iterativeFirstTracksWithTriplets = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace iterativeFirstTracksWithTriplets.src =iterativeFirstTrackCandidatesWithTriplets   
+replace iterativeFirstTracksWithTriplets.TTRHBuilder = "WithoutRefit"
+replace iterativeFirstTracksWithTriplets.Fitter = "KFFittingSmoother"
+replace iterativeFirstTracksWithTriplets.Propagator = "PropagatorWithMaterial"
+
+module iterativeFirstTracksWithPairs = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace iterativeFirstTracksWithPairs.src =iterativeFirstTrackCandidatesWithPairs   
+replace iterativeFirstTracksWithPairs.TTRHBuilder = "WithoutRefit"
+replace iterativeFirstTracksWithPairs.Fitter = "KFFittingSmoother"
+replace iterativeFirstTracksWithPairs.Propagator = "PropagatorWithMaterial"
+
+sequence iterativeFirstTracks = { 
+    iterativeFirstTracksWithTriplets &
+    iterativeFirstTracksWithPairs
+}

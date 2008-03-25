@@ -1,3 +1,0 @@
-module thirdGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-
-replace thirdGSTrackCandidates.SeedProducer = iterativeTrackingGSSeeds:ThirdMixed

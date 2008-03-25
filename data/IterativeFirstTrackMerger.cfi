@@ -1,0 +1,10 @@
+module iterativeFirstTrackMerging = FastTrackMerger {
+
+    VInputTag TrackProducers = { 
+	iterativeFirstTrackCandidatesWithTriplets,
+	iterativeFirstTracksWithTriplets,
+	iterativeFirstTrackCandidatesWithPairs,
+	iterativeFirstTracksWithPairs
+    }
+
+}

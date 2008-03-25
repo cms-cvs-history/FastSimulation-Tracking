@@ -1,11 +1,9 @@
-include "FastSimulation/Tracking/data/IterativeTrackFirstProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackSecondProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackThirdProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackFourthProducer.cff"
+include "FastSimulation/Tracking/data/IterativeFirstTrackProducer.cff"
+include "FastSimulation/Tracking/data/IterativeSecondTrackProducer.cff"
+include "FastSimulation/Tracking/data/IterativeThirdTrackProducer.cff"
 
-sequence iterativeGSTrackReco = { 
-    firstGSWithMaterialTracks,
-    secondGSWithMaterialTracks,
-    thirdGSWithMaterialTracks,
-    fourthGSWithMaterialTracks
+sequence iterativeTrackFitting = { 
+    iterativeFirstTracks &
+    iterativeSecondTracks &
+    iterativeThirdTracks
 }

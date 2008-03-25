@@ -1,0 +1,20 @@
+module iterativeSecondTracksWithTriplets = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace iterativeSecondTracksWithTriplets.src =iterativeSecondTrackCandidatesWithTriplets   
+replace iterativeSecondTracksWithTriplets.TTRHBuilder = "WithoutRefit"
+replace iterativeSecondTracksWithTriplets.Fitter = "KFFittingSmoother"
+replace iterativeSecondTracksWithTriplets.Propagator = "PropagatorWithMaterial"
+
+module iterativeSecondTracksWithPairs = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace iterativeSecondTracksWithPairs.src =iterativeSecondTrackCandidatesWithPairs   
+replace iterativeSecondTracksWithPairs.TTRHBuilder = "WithoutRefit"
+replace iterativeSecondTracksWithPairs.Fitter = "KFFittingSmoother"
+replace iterativeSecondTracksWithPairs.Propagator = "PropagatorWithMaterial"
+
+sequence iterativeSecondTracks = { 
+    iterativeSecondTracksWithTriplets &
+    iterativeSecondTracksWithPairs
+}

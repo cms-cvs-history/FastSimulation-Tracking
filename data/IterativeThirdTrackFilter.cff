@@ -1,0 +1,18 @@
+module thStep=VertexFilter{
+    bool VertexCut =true
+    InputTag recTracks     = iterativeThirdTrackMerging
+    int32 MinHits             = 3
+    double DistZFromVertex    = 0.1
+    double DistRhoFromVertex  = 0.1
+    double ChiCut             = 250000
+    InputTag recVertices      = pixelVertices:
+    bool UseQuality = true
+    string TrackQuality ="highPurity"
+    string TrackAlgorithm="iter3"
+}
+
+sequence iterativeThirdTrackFiltering = { 
+    thStep
+}
+
+

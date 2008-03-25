@@ -1,0 +1,26 @@
+module iterativeTrackingSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+
+replace iterativeTrackingSeeds.firstHitSubDetectorNumber = { 1, 3, 2, 3, 3 }
+replace iterativeTrackingSeeds.firstHitSubDetectors = { 1, 1,2,6, 1,3, 1,2,6, 1,2,6 }
+replace iterativeTrackingSeeds.secondHitSubDetectorNumber = { 2, 3, 3, 3, 3 }
+replace iterativeTrackingSeeds.secondHitSubDetectors = { 1,2, 1,2,6, 1,2,3, 1,2,6, 1,2,6 }
+replace iterativeTrackingSeeds.thirdHitSubDetectorNumber = { 3, 0, 3, 0, 0 }
+replace iterativeTrackingSeeds.thirdHitSubDetectors = { 1,2,3, 1,2,3  }
+replace iterativeTrackingSeeds.seedingAlgo      = {
+    "FirstMixedTriplets", "FirstMixedPairs", 
+    "SecondMixedTriplets", "SecondMixedPairs",
+    "ThirdMixedPairs"
+} 
+replace iterativeTrackingSeeds.minRecHits = { 5, 5, 3, 3, 3 }
+replace iterativeTrackingSeeds.pTMin = { 0.3, 0.3, 0.3, 0.3, 0.3 }
+replace iterativeTrackingSeeds.maxD0 = { 1., 1., 1., 1., 1. }
+replace iterativeTrackingSeeds.maxZ0 = { 30., 30., 30., 30., 30. }
+replace iterativeTrackingSeeds.numberOfHits  = { 3, 2, 3, 2, 2 }
+replace iterativeTrackingSeeds.originRadius = { 0.2, 0.2, 0.2, 0.2, 0.2 }
+replace iterativeTrackingSeeds.originHalfLength = { 15.9, 15.9, 15.9, 15.9, 15.9 }
+replace iterativeTrackingSeeds.originpTMin = { 0.9, 0.9, 0.3, 0.3, 0.3 }
+replace iterativeTrackingSeeds.zVertexConstraint = { -1.0, 0.4, -1.0, 0.4, -1.0 }
+replace iterativeTrackingSeeds.primaryVertices = { none, pixelVertices, none, pixelVertices, none }
+
+
+

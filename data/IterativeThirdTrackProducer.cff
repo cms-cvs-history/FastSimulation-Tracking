@@ -1,0 +1,11 @@
+module iterativeThirdTracksWithPairs = 
+  ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+
+replace iterativeThirdTracksWithPairs.src =iterativeThirdTrackCandidatesWithPairs   
+replace iterativeThirdTracksWithPairs.TTRHBuilder = "WithoutRefit"
+replace iterativeThirdTracksWithPairs.Fitter = "KFFittingSmoother"
+replace iterativeThirdTracksWithPairs.Propagator = "PropagatorWithMaterial"
+
+sequence iterativeThirdTracks = { 
+    iterativeThirdTracksWithPairs
+}

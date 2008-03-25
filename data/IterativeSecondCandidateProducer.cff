@@ -1,0 +1,16 @@
+module iterativeSecondTrackCandidatesWithTriplets = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+
+replace iterativeSecondTrackCandidatesWithTriplets.SeedProducer = iterativeTrackingSeeds:SecondMixedTriplets
+replace iterativeSecondTrackCandidatesWithTriplets.TrackProducer = globalPixelGSWithMaterialTracks
+replace iterativeSecondTrackCandidatesWithTriplets.MinNumberOfCrossedLayers = 3
+
+module iterativeSecondTrackCandidatesWithPairs = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+
+replace iterativeSecondTrackCandidatesWithPairs.SeedProducer = iterativeTrackingSeeds:SecondMixedPairs
+replace iterativeSecondTrackCandidatesWithPairs.TrackProducer = globalPixelGSWithMaterialTracks
+replace iterativeSecondTrackCandidatesWithPairs.MinNumberOfCrossedLayers = 3
+
+sequence iterativeSecondTrackCandidates = { 
+    iterativeSecondTrackCandidatesWithTriplets &
+    iterativeSecondTrackCandidatesWithPairs
+}

@@ -1,0 +1,16 @@
+  // Track filtering and quality.
+  //   input:    iterativeFirstTrackMerging 
+  //   output:   generalTracks
+  //   sequence: iterativeFirstTrackFiltering
+  // Official sequence has loose and tight quality tracks, not reproduced
+  // here. (People will use generalTracks, eventually.)
+
+include "RecoTracker/IterativeTracking/data/FirstFilter.cfi"
+
+module  generalTracks = selectHighPurity from "RecoTracker/FinalTrackSelectors/data/selectHighPurity.cfi"
+replace generalTracks.src              = iterativeFirstTrackMerging
+replace generalTracks.keepAllTracks    = true
+replace generalTracks.copyExtras       = true
+replace generalTracks.copyTrajectories = true
+
+sequence iterativeFirstTrackFiltering = { generalTracks & firstfilter }

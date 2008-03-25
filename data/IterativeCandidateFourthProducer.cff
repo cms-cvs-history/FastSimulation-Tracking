@@ -1,4 +1,0 @@
-module fourthGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-
-replace fourthGSTrackCandidates.SeedProducer = iterativeTrackingGSSeeds:FourthMixed
-replace fourthGSTrackCandidates.MinNumberOfCrossedLayers = 3

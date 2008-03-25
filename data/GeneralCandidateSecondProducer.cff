@@ -1,4 +1,0 @@
-module secondGeneralTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-
-replace secondGeneralTrackCandidates.SeedProducer = generalTrackingSeeds:MixedPairs
-replace secondGeneralTrackCandidates.TrackProducer = globalPixelGSWithMaterialTracks

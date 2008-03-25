@@ -1,0 +1,9 @@
+module iterativeThirdTrackCandidatesWithPairs = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+
+replace iterativeThirdTrackCandidatesWithPairs.SeedProducer = iterativeTrackingSeeds:ThirdMixedPairs
+replace iterativeThirdTrackCandidatesWithPairs.TrackProducer = globalPixelGSWithMaterialTracks
+replace iterativeThirdTrackCandidatesWithPairs.MinNumberOfCrossedLayers = 3
+
+sequence iterativeThirdTrackCandidates = { 
+    iterativeThirdTrackCandidatesWithPairs
+}
