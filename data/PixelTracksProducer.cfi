@@ -1,3 +1,5 @@
+include "RecoTracker/TkTrackingRegions/data/GlobalTrackingRegion.cfi"
+
 module pixelTracks = PixelTracksProducer
 {
     
@@ -5,7 +7,7 @@ module pixelTracks = PixelTracksProducer
 
     PSet RegionFactoryPSet = {
 	string ComponentName = "GlobalRegionProducer"
-	include "RecoTracker/TkTrackingRegions/data/GlobalTrackingRegion.cfi"
+	using RegionPSetBlock
     }
     
     
