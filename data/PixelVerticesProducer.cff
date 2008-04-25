@@ -2,7 +2,14 @@ include "RecoPixelVertexing/PixelVertexFinding/data/PixelVertexes.cfi"
 sequence pixelGSVertexing = { pixelVertices }
 
 include "FastSimulation/Tracking/data/PixelTracksProducer.cff"
-sequence recopixelvertexing = { 
+
+sequence recopixelvertexingSequence = { 
     pixelGSTracking &
     pixelVertices 
+}
+
+# A copy of the above
+sequence HLTRecopixelvertexingSequence = { 
+    hltPixelGSTracking &
+    hltPixelVertices 
 }
