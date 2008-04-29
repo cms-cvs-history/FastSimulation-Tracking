@@ -3,7 +3,7 @@ include "RecoTracker/TkTrackingRegions/data/GlobalTrackingRegion.cfi"
 module pixelTracks = PixelTracksProducer
 {
     
-    InputTag SeedProducer = pixelTripletGSSeeds:PixelTriplet
+    InputTag SeedProducer = pixelTripletSeeds:PixelTriplet
 
     PSet RegionFactoryPSet = {
 	string ComponentName = "GlobalRegionProducer"

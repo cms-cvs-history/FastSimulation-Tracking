@@ -2,19 +2,19 @@
 include "FastSimulation/Tracking/data/PixelLessSeedProducer.cff"
 
 # TrackCandidates
-module pixelLessGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-replace pixelLessGSTrackCandidates.SeedProducer = pixelLessGSSeeds:PixelLess
+module pixelLessTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace pixelLessTrackCandidates.SeedProducer = pixelLessSeeds:PixelLess
 
 # reco::Tracks
-module pixelLessGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  pixelLessGSWithMaterialTracks.src =pixelLessGSTrackCandidates   
-replace pixelLessGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
-replace pixelLessGSWithMaterialTracks.Fitter = "KFFittingSmoother"
-replace pixelLessGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
+module pixelLessWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  pixelLessWithMaterialTracks.src =pixelLessTrackCandidates   
+replace pixelLessWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+replace pixelLessWithMaterialTracks.Fitter = "KFFittingSmoother"
+replace pixelLessWithMaterialTracks.Propagator = "PropagatorWithMaterial"
 
 # The sequence
-sequence pixelLessGSTracking = {
-    pixelLessGSSeeds,
-    pixelLessGSTrackCandidates,
-    pixelLessGSWithMaterialTracks
+sequence pixelLessTracking = {
+    pixelLessSeeds,
+    pixelLessTrackCandidates,
+    pixelLessWithMaterialTracks
 }

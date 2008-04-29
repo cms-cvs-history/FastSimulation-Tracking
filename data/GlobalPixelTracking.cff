@@ -2,19 +2,19 @@
 include "FastSimulation/Tracking/data/GlobalPixelSeedProducer.cff"
 
 # TrackCandidates
-module globalPixelGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-replace globalPixelGSTrackCandidates.SeedProducer = globalPixelGSSeeds:GlobalPixel
+module globalPixelTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace globalPixelTrackCandidates.SeedProducer = globalPixelSeeds:GlobalPixel
 
 # reco::Tracks (possibly with invalid hits)
-module globalPixelGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace globalPixelGSWithMaterialTracks.src =globalPixelGSTrackCandidates  
-replace globalPixelGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
-replace globalPixelGSWithMaterialTracks.Fitter = "KFFittingSmoother"
-replace globalPixelGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
+module globalPixelWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace globalPixelWithMaterialTracks.src =globalPixelTrackCandidates  
+replace globalPixelWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+replace globalPixelWithMaterialTracks.Fitter = "KFFittingSmoother"
+replace globalPixelWithMaterialTracks.Propagator = "PropagatorWithMaterial"
 
 # The sequence
-sequence globalPixelGSTracking = {
-    globalPixelGSSeeds,
-    globalPixelGSTrackCandidates,
-    globalPixelGSWithMaterialTracks
+sequence globalPixelTracking = {
+    globalPixelSeeds,
+    globalPixelTrackCandidates,
+    globalPixelWithMaterialTracks
 }

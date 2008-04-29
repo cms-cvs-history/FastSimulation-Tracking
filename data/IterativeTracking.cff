@@ -11,8 +11,8 @@ include "FastSimulation/Tracking/data/IterativeTracks.cfi"
 */
 
 sequence iterativeTracking = {
-    pixelGSTracking &
-    pixelGSVertexing &
+    pixelTracking &
+    pixelVertexing &
     iterativeTrackingSeeds &
     iterativeTrackCandidates &
     iterativeTrackFitting &

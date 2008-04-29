@@ -3,7 +3,7 @@ module trackCandidateProducer = TrackCandidateProducer
 
     InputTag HitProducer = siTrackerGaussianSmearingRecHits:TrackerGSMatchedRecHits
 
-    InputTag SeedProducer = globalPixelGSSeeds:GlobalPixel
+    InputTag SeedProducer = globalPixelSeeds:GlobalPixel
 
     # The smallest number of crossed layers to make a candidate
     uint32 MinNumberOfCrossedLayers = 5

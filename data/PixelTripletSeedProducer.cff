@@ -1,11 +1,11 @@
-module pixelTripletGSSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+module pixelTripletSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace pixelTripletGSSeeds.numberOfHits = { 3 }
+replace pixelTripletSeeds.numberOfHits = { 3 }
 
-replace pixelTripletGSSeeds.firstHitSubDetectorNumber = { 2 }
-replace pixelTripletGSSeeds.firstHitSubDetectors = {1,2}
-replace pixelTripletGSSeeds.secondHitSubDetectorNumber = { 2 }
-replace pixelTripletGSSeeds.secondHitSubDetectors = {1,2}
-replace pixelTripletGSSeeds.thirdHitSubDetectorNumber = { 2 }
-replace pixelTripletGSSeeds.thirdHitSubDetectors = {1,2}
-replace pixelTripletGSSeeds.seedingAlgo      = {"PixelTriplet"}  
+replace pixelTripletSeeds.firstHitSubDetectorNumber = { 2 }
+replace pixelTripletSeeds.firstHitSubDetectors = {1,2}
+replace pixelTripletSeeds.secondHitSubDetectorNumber = { 2 }
+replace pixelTripletSeeds.secondHitSubDetectors = {1,2}
+replace pixelTripletSeeds.thirdHitSubDetectorNumber = { 2 }
+replace pixelTripletSeeds.thirdHitSubDetectors = {1,2}
+replace pixelTripletSeeds.seedingAlgo      = {"PixelTriplet"}  

@@ -2,32 +2,32 @@
 include "FastSimulation/Tracking/data/GlobalMixedSeedProducer.cff"
 
 # TrackCandidates
-module globalMixedGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
-replace globalMixedGSTrackCandidates.SeedProducer = globalMixedGSSeeds:GlobalMixed
-replace globalMixedGSTrackCandidates.TrackProducer = globalPixelGSWithMaterialTracks
+module globalMixedTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+replace globalMixedTrackCandidates.SeedProducer = globalMixedSeeds:GlobalMixed
+replace globalMixedTrackCandidates.TrackProducer = globalPixelWithMaterialTracks
 
 # reco::Tracks
-module globalMixedGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
-replace  globalMixedGSWithMaterialTracks.src =globalMixedGSTrackCandidates   
-replace globalMixedGSWithMaterialTracks.TTRHBuilder = "WithoutRefit"
-replace globalMixedGSWithMaterialTracks.Fitter = "KFFittingSmoother"
-replace globalMixedGSWithMaterialTracks.Propagator = "PropagatorWithMaterial"
+module globalMixedWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
+replace  globalMixedWithMaterialTracks.src =globalMixedTrackCandidates   
+replace globalMixedWithMaterialTracks.TTRHBuilder = "WithoutRefit"
+replace globalMixedWithMaterialTracks.Fitter = "KFFittingSmoother"
+replace globalMixedWithMaterialTracks.Propagator = "PropagatorWithMaterial"
 
 # Merging
-module ctfGSWithMaterialTracks = FastTrackMerger {
+module ctfWithMaterialTracks = FastTrackMerger {
 
     VInputTag TrackProducers = { 
-	globalMixedGSTrackCandidates,
-	globalMixedGSWithMaterialTracks
+	globalMixedTrackCandidates,
+	globalMixedWithMaterialTracks
     }
 
 }
 
 
 # The sequence
-sequence ctfGSTracking = {
-    globalMixedGSSeeds,
-    globalMixedGSTrackCandidates,
-    globalMixedGSWithMaterialTracks,
-    ctfGSWithMaterialTracks
+sequence ctfTracking = {
+    globalMixedSeeds,
+    globalMixedTrackCandidates,
+    globalMixedWithMaterialTracks,
+    ctfWithMaterialTracks
 }
