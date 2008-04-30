@@ -6,3 +6,9 @@ sequence recopixelvertexing = {
     pixelTracking &
     pixelVertices 
 }
+
+# A copy of the above
+sequence HLTRecopixelvertexingSequence = { 
+    hltPixelTracking &
+    hltPixelVertices 
+}

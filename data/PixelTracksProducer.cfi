@@ -1,28 +1,9 @@
-include "RecoTracker/TkTrackingRegions/data/GlobalTrackingRegion.cfi"
+module pixelTracks = FastTrackMerger {
 
-module pixelTracks = PixelTracksProducer
-{
-    
-    InputTag SeedProducer = pixelTripletSeeds:PixelTriplet
+    VInputTag TrackProducers = { 
+        hltPixelTracks
+    }
 
-    PSet RegionFactoryPSet = {
-	string ComponentName = "GlobalRegionProducer"
-	using RegionPSetBlock
-    }
-    
-    
-    PSet   FitterPSet = {
-	string ComponentName = "PixelFitterByHelixProjections"
-	string TTRHBuilder = "WithoutRefit"
-    }
-    
-    PSet   FilterPSet = {
-	string ComponentName = "PixelTrackFilterByKinematics"
-	double ptMin = 0.
-	double nSigmaInvPtTolerance = 0.
-	double tipMax = 1.0
-	double nSigmaTipMaxTolerance = 0.
-	double chi2 = 1000.
-    }
-    
+    untracked bool SaveTracksOnly = true
+
 }

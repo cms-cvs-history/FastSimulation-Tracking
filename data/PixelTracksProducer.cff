@@ -1,7 +1,15 @@
 include "FastSimulation/Tracking/data/PixelTripletSeedProducer.cff"
 include "FastSimulation/Tracking/data/PixelTracksProducer.cfi"
+include "FastSimulation/Tracking/data/HLTPixelTracksProducer.cfi"
 
-sequence pixelTracking = { 
+sequence hltPixelTracking = { 
     pixelTripletSeeds &
+    hltPixelTracks
+}
+
+# Just a copy of the above, for HLT
+sequence pixelTracking = {
+    hltPixelTracking & 
     pixelTracks
 }
+
