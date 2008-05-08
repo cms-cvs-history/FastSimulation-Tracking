@@ -1,0 +1,22 @@
+module iterativeFirstSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
+
+replace iterativeFirstSeeds.firstHitSubDetectorNumber = { 1, 3 }
+replace iterativeFirstSeeds.firstHitSubDetectors = { 1, 1,2,6 }
+replace iterativeFirstSeeds.secondHitSubDetectorNumber = { 2, 3 }
+replace iterativeFirstSeeds.secondHitSubDetectors = { 1,2, 1,2,6 }
+replace iterativeFirstSeeds.thirdHitSubDetectorNumber = { 3, 0 }
+replace iterativeFirstSeeds.thirdHitSubDetectors = { 1,2,3 }
+replace iterativeFirstSeeds.seedingAlgo      = { "FirstMixedTriplets", "FirstMixedPairs" } 
+replace iterativeFirstSeeds.minRecHits = { 5, 5 }
+replace iterativeFirstSeeds.pTMin = { 0.3, 0.3 }
+replace iterativeFirstSeeds.maxD0 = { 1., 1. }
+replace iterativeFirstSeeds.maxZ0 = { 30., 30. }
+replace iterativeFirstSeeds.numberOfHits  = { 3, 2 }
+replace iterativeFirstSeeds.originRadius = { 0.2, 0.2 }
+replace iterativeFirstSeeds.originHalfLength = { 15.9, 15.9 }
+replace iterativeFirstSeeds.originpTMin = { 0.9, 0.9 }
+replace iterativeFirstSeeds.zVertexConstraint = { -1.0, 0.4 }
+replace iterativeFirstSeeds.primaryVertices = { none, pixelVertices }
+
+
+

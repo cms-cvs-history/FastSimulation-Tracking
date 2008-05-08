@@ -1,0 +1,14 @@
+include "FastSimulation/Tracking/data/IterativeSecondSeedProducer.cff"
+include "FastSimulation/Tracking/data/IterativeSecondCandidateProducer.cff"
+include "FastSimulation/Tracking/data/IterativeSecondTrackProducer.cff"
+include "FastSimulation/Tracking/data/IterativeSecondTrackMerger.cfi"
+include "FastSimulation/Tracking/data/IterativeSecondTrackFilter.cff"
+
+sequence iterativeSecondTracking = {
+    iterativeSecondSeeds & 
+    iterativeSecondTrackCandidatesWithTriplets & 
+    iterativeSecondTrackCandidatesWithPairs &
+    iterativeSecondTracks &
+    iterativeSecondTrackMerging &
+    iterativeSecondTrackFiltering
+}

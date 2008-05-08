@@ -1,7 +1,8 @@
 module iterativeThirdTrackCandidatesWithPairs = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 
-replace iterativeThirdTrackCandidatesWithPairs.SeedProducer = iterativeTrackingSeeds:ThirdMixedPairs
-replace iterativeThirdTrackCandidatesWithPairs.TrackProducer = globalPixelWithMaterialTracks
+replace iterativeThirdTrackCandidatesWithPairs.SeedProducer = iterativeThirdSeeds:ThirdMixedPairs
+replace iterativeThirdTrackCandidatesWithPairs.TrackProducers = { firstfilter, secStep }
+replace iterativeThirdTrackCandidatesWithPairs.KeepFittedTracks = false
 replace iterativeThirdTrackCandidatesWithPairs.MinNumberOfCrossedLayers = 3
 
 sequence iterativeThirdTrackCandidates = { 
