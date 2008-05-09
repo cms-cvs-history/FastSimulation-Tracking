@@ -1,21 +1,13 @@
 include "FastSimulation/Tracking/data/PixelTracksProducer.cff"
 include "FastSimulation/Tracking/data/PixelVerticesProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackSeedProducer.cff"
-include "FastSimulation/Tracking/data/IterativeCandidateProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackProducer.cff"
-include "FastSimulation/Tracking/data/IterativeTrackMerger.cff"
-include "FastSimulation/Tracking/data/IterativeTrackFilter.cff"
-/*
-include "FastSimulation/Tracking/data/IterativeVertexFilter.cff"
-include "FastSimulation/Tracking/data/IterativeTracks.cfi"
-*/
+include "FastSimulation/Tracking/data/IterativeFirstTracking.cff"
+include "FastSimulation/Tracking/data/IterativeSecondTracking.cff"
+include "FastSimulation/Tracking/data/IterativeThirdTracking.cff"
 
 sequence iterativeTracking = {
     pixelGSTracking &
     pixelGSVertexing &
-    iterativeTrackingSeeds &
-    iterativeTrackCandidates &
-    iterativeTrackFitting &
-    iterativeTrackMerging &
-    iterativeTrackFiltering
+    iterativeFirstTracking &
+    iterativeSecondTracking &
+    iterativeThirdTracking
 }

@@ -4,7 +4,7 @@ include "FastSimulation/Tracking/data/GlobalMixedSeedProducer.cff"
 # TrackCandidates
 module globalMixedGSTrackCandidates = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 replace globalMixedGSTrackCandidates.SeedProducer = globalMixedGSSeeds:GlobalMixed
-replace globalMixedGSTrackCandidates.TrackProducer = globalPixelGSWithMaterialTracks
+replace globalMixedGSTrackCandidates.TrackProducers = { globalPixelGSWithMaterialTracks }
 
 # reco::Tracks
 module globalMixedGSWithMaterialTracks = ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"

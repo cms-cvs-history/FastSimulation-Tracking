@@ -11,8 +11,13 @@ module trackCandidateProducer = TrackCandidateProducer
     # The number of crossed layers needed before stopping tracking
     uint32 MaxNumberOfCrossedLayers = 999
 
-    InputTag TrackProducer = generalTracks
+    # The tracks already fitted - no need to fit them already !
+    VInputTag TrackProducers = { generalTracks }
     
+    # If true, keep the tracks fitted in the previous collection
+    # Just ignore them otherwise
+    bool KeepFittedTracks = true
+
     # Reject overlapping hits? (GroupedTracking from 170pre2 onwards)
     bool OverlapCleaning = false
 
