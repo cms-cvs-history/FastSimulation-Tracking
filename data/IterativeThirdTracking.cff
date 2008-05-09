@@ -1,0 +1,13 @@
+include "FastSimulation/Tracking/data/IterativeThirdSeedProducer.cff"
+include "FastSimulation/Tracking/data/IterativeThirdCandidateProducer.cff"
+include "FastSimulation/Tracking/data/IterativeThirdTrackProducer.cff"
+include "FastSimulation/Tracking/data/IterativeThirdTrackMerger.cfi"
+include "FastSimulation/Tracking/data/IterativeThirdTrackFilter.cff"
+
+sequence iterativeThirdTracking = {
+    iterativeThirdSeeds &
+    iterativeThirdTrackCandidatesWithPairs &
+    iterativeThirdTracks &
+    iterativeThirdTrackMerging &
+    iterativeThirdTrackFiltering
+}
