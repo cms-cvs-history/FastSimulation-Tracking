@@ -1,11 +1,13 @@
 module iterativeFirstSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace iterativeFirstSeeds.firstHitSubDetectorNumber = { 1, 3 }
-replace iterativeFirstSeeds.firstHitSubDetectors = { 1, 1,2,6 }
+
+replace iterativeFirstSeeds.firstHitSubDetectorNumber = { 1, 2 }
+replace iterativeFirstSeeds.firstHitSubDetectors = { 1, 1,2 }
 replace iterativeFirstSeeds.secondHitSubDetectorNumber = { 2, 3 }
 replace iterativeFirstSeeds.secondHitSubDetectors = { 1,2, 1,2,6 }
-replace iterativeFirstSeeds.thirdHitSubDetectorNumber = { 3, 0 }
-replace iterativeFirstSeeds.thirdHitSubDetectors = { 1,2,3 }
+replace iterativeFirstSeeds.thirdHitSubDetectorNumber = { 2, 0 }
+replace iterativeFirstSeeds.thirdHitSubDetectors = { 1,2 } 
+
 replace iterativeFirstSeeds.seedingAlgo      = { "FirstMixedTriplets", "FirstMixedPairs" } 
 replace iterativeFirstSeeds.minRecHits = { 5, 5 }
 replace iterativeFirstSeeds.pTMin = { 0.3, 0.3 }
