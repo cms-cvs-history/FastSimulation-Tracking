@@ -7,7 +7,7 @@ include "FastSimulation/Tracking/data/IterativeSecondTrackFilter.cff"
 sequence iterativeSecondTracking = {
     iterativeSecondSeeds & 
     iterativeSecondTrackCandidatesWithTriplets & 
-    iterativeSecondTrackCandidatesWithPairs &
+    iterativeSecondTrackCandidatesWithPlTriplets &
     iterativeSecondTracks &
     iterativeSecondTrackMerging &
     iterativeSecondTrackFiltering

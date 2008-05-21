@@ -6,15 +6,15 @@ replace iterativeSecondTracksWithTriplets.TTRHBuilder = "WithoutRefit"
 replace iterativeSecondTracksWithTriplets.Fitter = "KFFittingSmoother"
 replace iterativeSecondTracksWithTriplets.Propagator = "PropagatorWithMaterial"
 
-module iterativeSecondTracksWithPairs = 
+module iterativeSecondTracksWithPlTriplets = 
   ctfWithMaterialTracks from "RecoTracker/TrackProducer/data/CTFFinalFitWithMaterial.cfi"
 
-replace iterativeSecondTracksWithPairs.src =iterativeSecondTrackCandidatesWithPairs   
-replace iterativeSecondTracksWithPairs.TTRHBuilder = "WithoutRefit"
-replace iterativeSecondTracksWithPairs.Fitter = "KFFittingSmoother"
-replace iterativeSecondTracksWithPairs.Propagator = "PropagatorWithMaterial"
+replace iterativeSecondTracksWithPlTriplets.src =iterativeSecondTrackCandidatesWithPlTriplets   
+replace iterativeSecondTracksWithPlTriplets.TTRHBuilder = "WithoutRefit"
+replace iterativeSecondTracksWithPlTriplets.Fitter = "KFFittingSmoother"
+replace iterativeSecondTracksWithPlTriplets.Propagator = "PropagatorWithMaterial"
 
 sequence iterativeSecondTracks = { 
     iterativeSecondTracksWithTriplets &
-    iterativeSecondTracksWithPairs
+    iterativeSecondTracksWithPlTriplets
 }

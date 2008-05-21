@@ -1,12 +1,12 @@
 module iterativeSecondSeeds = trajectorySeedProducer from "FastSimulation/Tracking/data/TrajectorySeedProducer.cfi"
 
-replace iterativeSecondSeeds.firstHitSubDetectorNumber = { 2, 3 }
-replace iterativeSecondSeeds.firstHitSubDetectors = { 1,3, 1,2,6 }
-replace iterativeSecondSeeds.secondHitSubDetectorNumber = { 3, 3 }
-replace iterativeSecondSeeds.secondHitSubDetectors = { 1,2,3, 1,2,6 }
-replace iterativeSecondSeeds.thirdHitSubDetectorNumber = { 3, 0 }
-replace iterativeSecondSeeds.thirdHitSubDetectors = { 1,2,3 }
-replace iterativeSecondSeeds.seedingAlgo      = { "SecondMixedTriplets", "SecondMixedPairs" } 
+replace iterativeSecondSeeds.firstHitSubDetectorNumber = { 1, 1 }
+replace iterativeSecondSeeds.firstHitSubDetectors = { 1, 3 }
+replace iterativeSecondSeeds.secondHitSubDetectorNumber = { 2, 1 }
+replace iterativeSecondSeeds.secondHitSubDetectors = { 1,2, 3 }
+replace iterativeSecondSeeds.thirdHitSubDetectorNumber = { 2, 1 }
+replace iterativeSecondSeeds.thirdHitSubDetectors = { 1,2, 3 }
+replace iterativeSecondSeeds.seedingAlgo      = { "SecondPixelTriplets", "SecondPixelLessTriplets" } 
 replace iterativeSecondSeeds.minRecHits = { 3, 3 }
 replace iterativeSecondSeeds.pTMin = { 0.3, 0.3  }
 replace iterativeSecondSeeds.maxD0 = { 1., 1. }

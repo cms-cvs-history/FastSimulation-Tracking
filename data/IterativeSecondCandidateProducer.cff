@@ -1,18 +1,18 @@
 module iterativeSecondTrackCandidatesWithTriplets = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 
-replace iterativeSecondTrackCandidatesWithTriplets.SeedProducer = iterativeSecondSeeds:SecondMixedTriplets
+replace iterativeSecondTrackCandidatesWithTriplets.SeedProducer = iterativeSecondSeeds:SecondPixelTriplets
 replace iterativeSecondTrackCandidatesWithTriplets.TrackProducers = { firstfilter }
 replace iterativeSecondTrackCandidatesWithTriplets.KeepFittedTracks = false
 replace iterativeSecondTrackCandidatesWithTriplets.MinNumberOfCrossedLayers = 3
 
-module iterativeSecondTrackCandidatesWithPairs = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
+module iterativeSecondTrackCandidatesWithPlTriplets = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 
-replace iterativeSecondTrackCandidatesWithPairs.SeedProducer = iterativeSecondSeeds:SecondMixedPairs
-replace iterativeSecondTrackCandidatesWithPairs.TrackProducers = { firstfilter }
-replace iterativeSecondTrackCandidatesWithPairs.KeepFittedTracks = false
-replace iterativeSecondTrackCandidatesWithPairs.MinNumberOfCrossedLayers = 3
+replace iterativeSecondTrackCandidatesWithPlTriplets.SeedProducer = iterativeSecondSeeds:SecondPixelLessTriplets
+replace iterativeSecondTrackCandidatesWithPlTriplets.TrackProducers = { firstfilter }
+replace iterativeSecondTrackCandidatesWithPlTriplets.KeepFittedTracks = false
+replace iterativeSecondTrackCandidatesWithPlTriplets.MinNumberOfCrossedLayers = 3
 
 sequence iterativeSecondTrackCandidates = { 
     iterativeSecondTrackCandidatesWithTriplets &
-    iterativeSecondTrackCandidatesWithPairs
+    iterativeSecondTrackCandidatesWithPlTriplets
 }
