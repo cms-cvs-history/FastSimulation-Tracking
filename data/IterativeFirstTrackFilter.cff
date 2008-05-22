@@ -7,10 +7,10 @@
 
 include "RecoTracker/IterativeTracking/data/FirstFilter.cfi"
 
-module  generalTracks = selectHighPurity from "RecoTracker/FinalTrackSelectors/data/selectHighPurity.cfi"
-replace generalTracks.src              = iterativeFirstTrackMerging
-replace generalTracks.keepAllTracks    = true
-replace generalTracks.copyExtras       = true
-replace generalTracks.copyTrajectories = true
+module  firstStepTracksWithQuality = selectHighPurity from "RecoTracker/FinalTrackSelectors/data/selectHighPurity.cfi"
+replace firstStepTracksWithQuality.src              = iterativeFirstTrackMerging
+replace firstStepTracksWithQuality.keepAllTracks    = true
+replace firstStepTracksWithQuality.copyExtras       = true
+replace firstStepTracksWithQuality.copyTrajectories = true
 
-sequence iterativeFirstTrackFiltering = { generalTracks & firstfilter }
+sequence iterativeFirstTrackFiltering = { firstStepTracksWithQuality & firstfilter }

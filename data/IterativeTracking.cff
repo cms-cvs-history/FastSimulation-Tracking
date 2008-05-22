@@ -3,11 +3,12 @@ include "FastSimulation/Tracking/data/PixelVerticesProducer.cff"
 include "FastSimulation/Tracking/data/IterativeFirstTracking.cff"
 include "FastSimulation/Tracking/data/IterativeSecondTracking.cff"
 include "FastSimulation/Tracking/data/IterativeThirdTracking.cff"
-
+include "FastSimulation/Tracking/data/GeneralTracks.cfi"
 sequence iterativeTracking = {
     pixelTracking &
     pixelVertexing &
     iterativeFirstTracking &
     iterativeSecondTracking &
-    iterativeThirdTracking
+    iterativeThirdTracking &
+    generalTracks
 }

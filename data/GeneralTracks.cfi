@@ -1,0 +1,15 @@
+module generalTracks = FastTrackMerger {
+
+    VInputTag TrackProducers = { 
+	firstfilter,
+	secStep,
+	thStep
+    }
+
+  # set new quality for confirmed tracks
+  untracked bool promoteTrackQuality = true
+  # new quality setting
+  untracked string newQuality = "confirmed"
+
+}
+
