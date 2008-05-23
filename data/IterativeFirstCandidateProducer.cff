@@ -1,6 +1,6 @@
 module iterativeFirstTrackCandidatesWithTriplets = trackCandidateProducer from "FastSimulation/Tracking/data/TrackCandidateProducer.cfi"
 
-replace iterativeFirstTrackCandidatesWithTriplets.SeedProducer = iterativeFirstSeeds:FirstMixedTriplets
+replace iterativeFirstTrackCandidatesWithTriplets.SeedProducer = iterativeFirstSeeds:FirstPixelTriplets
 replace iterativeFirstTrackCandidatesWithTriplets.TrackProducers = { globalPixelWithMaterialTracks }
 replace iterativeFirstTrackCandidatesWithTriplets.MinNumberOfCrossedLayers = 5
 

@@ -4,6 +4,8 @@ include "FastSimulation/Tracking/data/IterativeFirstTracking.cff"
 include "FastSimulation/Tracking/data/IterativeSecondTracking.cff"
 include "FastSimulation/Tracking/data/IterativeThirdTracking.cff"
 include "FastSimulation/Tracking/data/GeneralTracks.cfi"
+#include "RecoTracker/FinalTrackSelectors/data/MergeTrackCollections.cff"
+
 sequence iterativeTracking = {
     pixelTracking &
     pixelVertexing &
