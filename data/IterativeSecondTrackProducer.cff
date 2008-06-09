@@ -11,7 +11,7 @@ module iterativeSecondTracksWithPlTriplets =
 
 replace iterativeSecondTracksWithPlTriplets.src =iterativeSecondTrackCandidatesWithPlTriplets   
 replace iterativeSecondTracksWithPlTriplets.TTRHBuilder = "WithoutRefit"
-replace iterativeSecondTracksWithPlTriplets.Fitter = "KFFittingSmoother"
+replace iterativeSecondTracksWithPlTriplets.Fitter = "KFFittingSmootherWithOutliersRejectionAndRK"
 replace iterativeSecondTracksWithPlTriplets.Propagator = "PropagatorWithMaterial"
 
 sequence iterativeSecondTracks = { 

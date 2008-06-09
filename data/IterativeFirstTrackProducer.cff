@@ -11,7 +11,7 @@ module iterativeFirstTracksWithPairs =
 
 replace iterativeFirstTracksWithPairs.src =iterativeFirstTrackCandidatesWithPairs   
 replace iterativeFirstTracksWithPairs.TTRHBuilder = "WithoutRefit"
-replace iterativeFirstTracksWithPairs.Fitter = "KFFittingSmoother"
+replace iterativeFirstTracksWithPairs.Fitter = "KFFittingSmootherWithOutliersRejectionAndRK"
 replace iterativeFirstTracksWithPairs.Propagator = "PropagatorWithMaterial"
 
 sequence iterativeFirstTracks = { 

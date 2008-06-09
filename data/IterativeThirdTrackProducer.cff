@@ -3,7 +3,7 @@ module iterativeThirdTracksWithPairs =
 
 replace iterativeThirdTracksWithPairs.src =iterativeThirdTrackCandidatesWithPairs   
 replace iterativeThirdTracksWithPairs.TTRHBuilder = "WithoutRefit"
-replace iterativeThirdTracksWithPairs.Fitter = "KFFittingSmoother"
+replace iterativeThirdTracksWithPairs.Fitter = "KFFittingSmootherWithOutliersRejectionAndRK"
 replace iterativeThirdTracksWithPairs.Propagator = "PropagatorWithMaterial"
 
 sequence iterativeThirdTracks = { 
