@@ -1,8 +1,6 @@
 module iterativeSecondTrackMerging = FastTrackMerger {
     VInputTag TrackProducers = { 
 	iterativeSecondTrackCandidatesWithTriplets,
-	iterativeSecondTracksWithTriplets,
-	iterativeSecondTrackCandidatesWithPlTriplets,
-	iterativeSecondTracksWithPlTriplets
+	iterativeSecondTracksWithTriplets
     }
 }
