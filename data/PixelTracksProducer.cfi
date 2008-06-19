@@ -1,9 +1,0 @@
-module pixelTracks = FastTrackMerger {
-
-    VInputTag TrackProducers = { 
-        hltPixelTracks
-    }
-
-    untracked bool SaveTracksOnly = true
-
-}

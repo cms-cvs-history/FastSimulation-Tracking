@@ -1,9 +1,0 @@
-include "FastSimulation/Tracking/data/IterativeFirstTrackProducer.cff"
-include "FastSimulation/Tracking/data/IterativeSecondTrackProducer.cff"
-include "FastSimulation/Tracking/data/IterativeThirdTrackProducer.cff"
-
-sequence iterativeTrackFitting = { 
-    iterativeFirstTracks &
-    iterativeSecondTracks &
-    iterativeThirdTracks
-}

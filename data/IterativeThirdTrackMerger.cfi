@@ -1,8 +1,0 @@
-module iterativeThirdTrackMerging = FastTrackMerger {
-
-    VInputTag TrackProducers = { 
-	iterativeThirdTrackCandidatesWithPairs,
-	iterativeThirdTracksWithPairs
-    }
-
-}
