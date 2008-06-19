@@ -1,9 +1,0 @@
-include "FastSimulation/Tracking/data/IterativeFirstCandidateProducer.cff"
-include "FastSimulation/Tracking/data/IterativeSecondCandidateProducer.cff"
-include "FastSimulation/Tracking/data/IterativeThirdCandidateProducer.cff"
-
-sequence iterativeTrackCandidates = { 
-    iterativeFirstTrackCandidates &
-    iterativeSecondTrackCandidates &
-    iterativeThirdTrackCandidates 
-}
