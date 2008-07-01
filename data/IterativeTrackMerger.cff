@@ -1,9 +1,0 @@
-include "FastSimulation/Tracking/data/IterativeFirstTrackMerger.cfi"
-include "FastSimulation/Tracking/data/IterativeSecondTrackMerger.cfi"
-include "FastSimulation/Tracking/data/IterativeThirdTrackMerger.cfi"
-
-sequence iterativeTrackMerging = { 
-    iterativeFirstTrackMerging &
-    iterativeSecondTrackMerging &
-    iterativeThirdTrackMerging
-}
