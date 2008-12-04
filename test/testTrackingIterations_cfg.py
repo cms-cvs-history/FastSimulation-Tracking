@@ -29,8 +29,8 @@ process.source = cms.Source(
         #'file:SinglePion_FastFull_5.root',
         #'file:SinglePion_FastFull_6.root',
         #'file:SinglePion_FastFull_7.root'
-        'file:fevt_SinglePion_E0_1.root'
-        #'file:fevt_SinglePion_E1_1.root'
+        #'file:fevt_SinglePion_E0_1.root'
+        'file:fevt_SinglePion_E1_1.root'
         #'file:fevt_SinglePion_E2_1.root'
         #'file:fevt_SinglePion_E3_1.root',
         #'file:fevt_SinglePion_E3_2.root'
@@ -104,7 +104,7 @@ process.MessageLogger.destinations = ['test.txt']
 # Should be commented out in the analysis step
 process.o1 = cms.OutputModule(
     "PoolOutputModule",
-    fileName = cms.untracked.string('SinglePion_FastFull_0.root'),
+    fileName = cms.untracked.string('SinglePion_FastFull_1.root'),
     outputCommands = cms.untracked.vstring(
        "keep *",
        "drop *_mix_*_*"
