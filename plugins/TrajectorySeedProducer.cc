@@ -561,9 +561,7 @@ TrajectorySeedProducer::produce(edm::Event& e, const edm::EventSetup& es) {
       //      const TrajectoryStateOnSurface initialTSOS(initialFTS, initialLayer->surface());      
 
       const TrajectoryStateOnSurface initialTSOS = thePropagator->propagate(initialFTS,initialLayer->surface()) ;
-      if (!initialTSOS.isValid()){
-	std::cout << "initial TSOS not valid! " << std::endl;
-      }
+      if (!initialTSOS.isValid()) continue; 
 
 #ifdef FAMOS_DEBUG
       std::cout << "TrajectorySeedProducer: TSOS global momentum "    << initialTSOS.globalMomentum() << std::endl;
