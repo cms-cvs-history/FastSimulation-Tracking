@@ -9,9 +9,10 @@ iterativeFirstTracking = cms.Sequence(iterativeFirstSeeds
                                       +iterativeFirstTrackCandidatesWithTriplets
                                       +iterativeFirstTrackCandidatesWithPairs
                                       +iterativeFirstTracks
+##change the order of the filtering and merging
                                       +iterativeZeroTrackMerging
-                                      +iterativeFirstTrackMerging
                                       +iterativeZeroTrackFiltering
+                                      +iterativeFirstTrackMerging
                                       +iterativeFirstTrackFiltering)
                                       
 
