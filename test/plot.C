@@ -363,11 +363,13 @@ void totalEfficiency(unsigned int iter) {
 
   TCanvas *c = new TCanvas("c","",1000, 600);
   c->Divide(1,2);
+  TH2F* iter0Fast;
   TH2F* iter1Fast;
   TH2F* iter2Fast;
   TH2F* iter3Fast;
   TH2F* iter4Fast;
   TH2F* iter5Fast;
+  TH2F* iter0Full;
   TH2F* iter1Full;
   TH2F* iter2Full;
   TH2F* iter3Full;
@@ -375,6 +377,8 @@ void totalEfficiency(unsigned int iter) {
   TH2F* iter5Full;
   TH2F* genPlot;
   genPlot = (TH2F*) gDirectory->Get("genEtaP");
+  iter0Full = (TH2F*) gDirectory->Get("eff0Full");
+  iter0Fast = (TH2F*) gDirectory->Get("eff0Fast");
   iter1Full = (TH2F*) gDirectory->Get("eff1Full");
   iter1Fast = (TH2F*) gDirectory->Get("eff1Fast");
   iter2Full = (TH2F*) gDirectory->Get("eff2Full");
